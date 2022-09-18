@@ -1,0 +1,29 @@
+.form-group__button-save{
+  background-color: #000;
+  color: #fff;
+  width: 358px;
+  height: 50px;
+  padding: 0;
+  border: none;
+  margin-top: 13px;
+  font-size: 18px;
+  line-height: 22px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .3s;
+}
+.form-group__button-save:hover{
+  cursor: pointer;
+  opacity: .8;
+}
+
+@media (max-width: 620px) {
+  .form-group__button-save{
+    width: 238px;
+    margin-top: 45px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}

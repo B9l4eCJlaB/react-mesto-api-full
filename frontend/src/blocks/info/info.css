@@ -1,0 +1,16 @@
+.info{
+  flex-grow: 1;
+  padding-left: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; /*Сначала использовал baseline, но на Mozilla Firefox кнопка уползает слишком вниз */
+  
+}
+
+@media (max-width: 620px) {
+  .info{
+    padding: 0;
+    width: 282px;
+    justify-content: center;
+  }
+}

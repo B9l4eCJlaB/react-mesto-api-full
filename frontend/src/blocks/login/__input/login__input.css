@@ -1,0 +1,19 @@
+.login__input {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  font-family: inherit;
+  background-color: inherit;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 13px;
+  font-weight: 500;
+  line-height: 17px;
+
+}
+
+.login__input::placeholder {
+  color: #ccc;
+  font-weight: 400;
+  font-size: 14px;
+}
