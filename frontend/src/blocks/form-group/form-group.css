@@ -1,9 +1,0 @@
-.form-group{
- width: 358px;
- margin: 0 auto;
-}
-@media (max-width: 620px) {
-  .form-group{
-    width: 238px;
-  }
-}

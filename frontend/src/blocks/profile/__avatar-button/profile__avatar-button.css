@@ -1,0 +1,32 @@
+.profile__avatar-button {
+    padding: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    object-fit: cover;
+    background-color: transparent;
+    border: none;
+    transition: .4s all ease-in-out;
+}
+.profile__avatar-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    background-image: url(../../../images/pen.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 26px;
+}
+@media screen and (max-width: 560px) {
+    .profile__avatar-button {
+        bottom: 132px;
+        left: 96px;
+    }
+}
+@media screen and (max-width: 420px) {
+    .profile__avatar-button {
+        bottom: 104px;
+        left: 44px;
+    }
+}

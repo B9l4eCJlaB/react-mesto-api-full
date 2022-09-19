@@ -1,0 +1,33 @@
+.authentication__input {
+    display: flex;
+    color: #fff;
+    font-size: 14px;
+    line-height: 17px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    outline: none;
+  }
+
+  .authentication__input:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .authentication__input::placeholder {
+    color: #ccc;
+  }
+
+  .authentication__input::-webkit-input-placeholder {
+    color: #ccc;
+  }
+
+  .authentication__input::-moz-placeholder {
+    color: #ccc;
+  }
+  
+  .authentication__input::-ms-input-placeholder {
+    color: #ccc;
+  }

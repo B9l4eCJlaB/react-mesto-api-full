@@ -1,0 +1,16 @@
+.popup__input-container {
+    max-width: 358px;
+    min-width: 238px;
+    display: flex;
+    flex-direction: column;
+    border: 0;
+    margin: 0 auto;
+    padding: 0;
+    align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+    .popup__input-container {
+        max-width: calc(100% - 22px * 2);
+    }
+}

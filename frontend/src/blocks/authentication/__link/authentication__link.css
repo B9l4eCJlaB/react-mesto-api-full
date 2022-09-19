@@ -1,0 +1,10 @@
+.authentication__link {
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration: none;
+  }
+  .authentication__link:hover {
+    opacity: .6;
+    transition: opacity .2s linear;
+  }

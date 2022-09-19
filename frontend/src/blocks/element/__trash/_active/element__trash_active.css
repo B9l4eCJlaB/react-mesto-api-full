@@ -1,0 +1,9 @@
+.element__trash_active {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .4s ease;
+
+}
+.element__trash_active:hover {
+    opacity: .5;
+}

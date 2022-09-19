@@ -1,11 +1,14 @@
-export default function InfoTooltip({ isOpen, onClose, status, message }) {
+function InfoTooltip({ isOpen, image, name, text, onClose }) {
   return (
-    <div className={`popup ${isOpen && "popup_opened"}`}>
-      <div className="popup__container">
-        <div className={`popup__picture popup__picture_${status ? "ok" : "error"}`}></div>
-        <p className="popup__message">{message}</p>
-        <button className="popup__button-close" onClick={onClose} />
+    <section className={`popup popup-${name} ${isOpen ? "popup_opened" : ""}`}>
+      <div className="popup__main-container">
+        <div className="popup__form">
+          <button className="popup__close" onClick={onClose}></button>
+          <img className="popup__tooltip-image" src={image} alt={text} />
+          <p className="popup__tooltip-text">{text}</p>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
+export default InfoTooltip;

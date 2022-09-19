@@ -2,65 +2,73 @@ import { useContext, useEffect, useState } from "react";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 import PopupWithForm from "./PopupWithForm";
 
-function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
+function EditProfilePopup({ isOpen, onClose, onUpdateUser, isLoading }) {
+  const currentUser = useContext(CurrentUserContext);
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
-  const currentUser = useContext(CurrentUserContext);
 
   useEffect(() => {
-    setName(currentUser?.name || "");
-    setDescription(currentUser?.about || "");
-  }, [currentUser]);
+    setName(currentUser.name);
+    setDescription(currentUser.about);
+  }, [currentUser, isOpen]);
 
-  const handleChangeName = (evt) => {
-    setName(evt.target.value);
+  const handleChangeName = (e) => {
+    setName(e.target.value);
   };
 
-  const handleChangeDescription = (evt) => {
-    setDescription(evt.target.value);
+  const handleChangeDescription = (e) => {
+    setDescription(e.target.value);
   };
 
-  const handleSubmit = (evt) => {
-    evt.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
     onUpdateUser({
-      name,
+      name: name,
       about: description,
     });
   };
 
+  const handleClose = () => {
+    onClose();
+  };
+
   return (
     <PopupWithForm
-      name="reduct"
       title="Редактировать профиль"
+      name="profile"
+      buttonText="Сохранить"
+      buttonLoadingText="Сохранение..."
       isOpen={isOpen}
-      onClose={onClose}
+      onClose={handleClose}
       onSubmit={handleSubmit}
+      isLoading={isLoading}
     >
       <input
-        value={name}
-        onChange={handleChangeName}
-        type="text"
-        id="firstname"
-        className="form-group__item form-group__item_el_name"
+        className="popup__input popup__input_name"
         name="name"
-        minLength="2"
-        maxLength="40"
-        required
-      />
-      <span id="firstname-error" className="error"></span>
-
-      <input
-        value={description}
-        onChange={handleChangeDescription}
+        id="input-name"
         type="text"
-        id="job"
-        className="form-group__item form-group__item_el_job"
-        name="about"
-        minLength="2"
-        maxLength="200"
         required
+        value={name || ""}
+        minLength={2}
+        maxLength={40}
+        placeholder="Введите имя"
+        onChange={handleChangeName}
       />
-      <span id="job-error" className="error"></span>
+      <span className="popup__error input-name-error"></span>
+      <input
+        className="popup__input popup__input_description"
+        name="about"
+        id="input-description"
+        type="text"
+        required
+        value={description || ""}
+        minLength={2}
+        maxLength={200}
+        placeholder="О себе"
+        onChange={handleChangeDescription}
+      />
+      <span className="popup__error input-description-error"></span>
     </PopupWithForm>
   );
 }

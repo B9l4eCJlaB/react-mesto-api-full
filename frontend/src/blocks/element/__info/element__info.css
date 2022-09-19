@@ -1,0 +1,11 @@
+.element__info {
+    min-height: 29px;
+    max-height: 79px;
+    margin: 0 auto;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    justify-content: space-between;
+}

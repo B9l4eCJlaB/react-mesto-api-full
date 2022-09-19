@@ -1,0 +1,12 @@
+.profile__item-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+@media screen and (max-width: 560px) {
+    .profile__item-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+}

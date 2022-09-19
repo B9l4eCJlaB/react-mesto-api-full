@@ -1,0 +1,11 @@
+.popup__main-container {
+    max-width: 430px;
+    flex-grow: 1;
+    position: relative;
+}
+
+@media screen and (max-width: 560px) {
+   .popup__main-container {
+       max-width: calc(100% - 22px * 2);
+   }
+}
