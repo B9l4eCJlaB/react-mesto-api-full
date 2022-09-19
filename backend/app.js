@@ -6,14 +6,16 @@ const { userRouter } = require('./routes/users');
 const { cardRouter } = require('./routes/cards');
 const auth = require('./middlewares/auth');
 const NotFound = require('./errors/not-found');
-const { handleError } = require('./utils/handleError');
-const { checkCorseError } = require('./utils/checkCorseError');
+const { handleError } = require('./middlewares/handleError');
+const { cors } = require('./middlewares/cors');
+const limiter = require('./utils/limiter');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const { PORT = 3001 } = process.env;
 const app = express();
 
-app.use(checkCorseError);
+app.use(cors);
+app.use(limiter);
 
 app.use(express.json());
 
