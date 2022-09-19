@@ -54,6 +54,7 @@ function App() {
         });
     }
   }, [loggedIn]);
+  
   useEffect(() => {
     tokenCheck();
   }, []);
