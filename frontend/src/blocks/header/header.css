@@ -1,37 +1,4 @@
 .header {
-    padding-top: 45px;
-    max-width: 880px;
-    min-height: 74px;
+    max-width: 1280px;
     margin: 0 auto;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.header::before {
-    position: absolute;
-    content: '';
-    left: 0;
-    right: 0;
-    bottom: 0;
-    max-width: 100%;
-    height: 1px;
-    background-color: #545454;
-    opacity: .7;
-}
-
-@media screen and (max-width: 768px) {
-    .header {
-        max-width: calc(100% - 25px * 2);
-    }
-}
-@media screen and (max-width: 560px) {
-    .header {
-        padding-top: 28px;
-    }
-}
-@media screen and (max-width: 420px) {
-    .header {
-        max-width: 100%;
-    }
 }

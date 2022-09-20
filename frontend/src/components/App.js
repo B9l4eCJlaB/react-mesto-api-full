@@ -154,7 +154,7 @@ function App() {
     auth
       .register(email, password)
       .then((res) => {
-        if (res) {
+        if (res.data) {
           history.push("/sign-in");
           setIsSuccessTooltipOpen(true);
         } else {
