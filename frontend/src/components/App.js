@@ -154,10 +154,11 @@ function App() {
     auth
       .register(email, password)
       .then((res) => {
-        if (res.data) {
+        if (res && !res.message) {
           history.push("/sign-in");
           setIsSuccessTooltipOpen(true);
-        } else {
+        }
+        else {
           setIsErrorTooltipOpen(true);
         }
       })
