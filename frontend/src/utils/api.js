@@ -116,7 +116,7 @@ class Api {
 }
 
   const api = new Api({
-    url: 'http://localhost:3001',
+    url: 'https://api.zaharov.mesto.nomorepartiesxyz.ru',
     headers: {
       authorization: 'Bearer 384056b5ececd68c39b75293fdce41f0741594db8dbd96263625bb68b92dde34',
       'Content-Type': 'application/json'

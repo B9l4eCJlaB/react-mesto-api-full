@@ -2,6 +2,8 @@
 const allowedCors = [
     'http://localhost:3001',
     'http://localhost:3000',
+    'http://zaharov.nomorepartiesxyz.ru',
+    'https://zaharov.nomorepartiesxyz.ru'
   ];
   
   // eslint-disable-next-line consistent-return

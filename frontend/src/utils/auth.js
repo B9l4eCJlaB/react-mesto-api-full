@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://localhost:3001';
+export const BASE_URL = 'https://api.zaharov.mesto.nomorepartiesxyz.ru';
 
 export const register = (email, password) => {
     return fetch(`${BASE_URL}/signup`, {
