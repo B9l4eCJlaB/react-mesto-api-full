@@ -13,6 +13,7 @@
 * **Nested__BEM**
 * **Webpack**
 * **API**
+### IP: 51.250.13.226
 ### Ссылка на проект: [Mesto](https://zaharov.nomorepartiesxyz.ru "Вход на сайт Mesto")
 ### Домен сервера: [API](https://api.zaharov.mesto.nomorepartiesxyz.ru "click")
 
