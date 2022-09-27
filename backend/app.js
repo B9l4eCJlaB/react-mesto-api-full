@@ -1,6 +1,8 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
+const helmet = require('helmet');
+const bodyParser = require('body-parser');
 const { errors } = require('celebrate');
 const { userRouter } = require('./routes/users');
 const { cardRouter } = require('./routes/cards');
@@ -12,18 +14,22 @@ const limiter = require('./utils/limiter');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const { PORT = 3001 } = process.env;
-const app = express();
 
+const app = express();
+app.use(helmet());
 app.use(cors);
 app.use(limiter);
 
-app.use(express.json());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 const main = async () => {
   await mongoose.connect('mongodb://localhost:27017/mestodb', {
     useNewUrlParser: true,
   });
   console.log('db connect');
+  console.log(process.env.NODE_ENV);
+  console.log(process.env.JWT_SECRET);
 };
 
 main().catch((err) => {
